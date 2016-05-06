@@ -1,0 +1,15 @@
+# NPM
+node_modules
+
+# Bower
+bower_components
+
+# OSX file
+.DS_Store
+
+# SASS cache
+.sass-cache
+
+# CSS
+css/*.css
+css/*.map

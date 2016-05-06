@@ -1,0 +1,29 @@
+.layout-constrain {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: em($max-page-width);
+  padding-left: 1em;
+  padding-right: 1em;
+
+// For Corey's review Should this be replaced??
+
+  // @if $breakpoint-no-queries {
+  //   width: em($max-page-width);
+  // }
+}
+
+.layout-main {
+	@include clearfix;
+  @include add-grid(12 at 700px);
+  @include add-gutter(1);
+  &.sidebar {
+  	@include breakpoint(700px, $no-query: true) {
+    	.layout-main__content {
+      	@include grid-span(8,1);
+    	}
+    	.layout-main__sidebar {
+      	@include grid-span(4,9);
+    	}
+    }
+  }
+}
